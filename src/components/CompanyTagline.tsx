@@ -1,11 +1,15 @@
 import Image from "next/image";
 import React from "react";
-import tagLineImg from "@/assets/taglineSecImg.png";
 
 const CompanyTagline = () => {
   return (
     <section className="py-20 px-32 flex items-center gap-10">
-      <Image className="h-28" src={tagLineImg} alt="tagline section symbol" />
+      <Image
+        width={110}
+        height={57}
+        src="/assets/taglineSecImg.png"
+        alt="tagline section symbol"
+      />
 
       <p className="font-medium text-2xl text-center">
          Only KredX’s AP Solution lets you automate and streamline your entire
@@ -14,8 +18,10 @@ const CompanyTagline = () => {
       </p>
 
       <Image
-        className="h-28 transform rotate-180"
-        src={tagLineImg}
+        className="transform rotate-180"
+        width={110}
+        height={57}
+        src="/assets/taglineSecImg.png"
         alt="tagline section symbol"
       />
     </section>
