@@ -9,7 +9,14 @@ type IProps = {
 const FeatureCard = ({ feature }: IProps) => {
   return (
     <div className="space-y-3 flex flex-col items-center">
-      <Image width={50} height={50} src={feature?.imgSrc} alt="feature card" />
+      <div className="flex w-10 h-10">
+        <Image
+          width={50}
+          height={50}
+          src={feature?.imgSrc}
+          alt="feature card"
+        />
+      </div>
       <h3 className="font-semibold text-lg text-center">{feature?.title}</h3>
       <p className="text-sm text-center">{feature?.description}</p>
     </div>

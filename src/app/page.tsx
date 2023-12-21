@@ -40,8 +40,8 @@ export default function Home() {
       <CompanyTagline />
 
       {/* software features section */}
-      <section className="flex flex-col items-center gap-28 bg-featureSectionBg">
-        <h1 className="text-center font-semibold text-5xl w-[40rem] text-custom-gradient">
+      <section className="flex flex-col items-center gap-20 bg-featureSectionBg bg-center pt-8 pb-16">
+        <h1 className="text-center font-semibold text-5xl w-[40rem] bg-gradient-to-r from-[#239A99] to-[#4EB7E9] text-transparent bg-clip-text">
           KredX AP Automation Capabilities
         </h1>
 
@@ -52,6 +52,8 @@ export default function Home() {
               return <FeatureCard key={index} feature={feature} />;
             })}
         </div>
+
+        <Button content="Request Demo" />
       </section>
     </main>
   );
