@@ -1,4 +1,4 @@
-import { IFeatureData } from "./interface";
+import { ICmsData, IFeatureData } from "./interface";
 
 export const featuresData: IFeatureData[] = [
   {
@@ -48,5 +48,36 @@ export const featuresData: IFeatureData[] = [
     title: "Audit ready",
     description:
       "One-click access to all conversations and notes at each invoice level. Data available on cloud archived after 7 years for full audit trail wherever required.",
+  },
+];
+
+export const cmsData: ICmsData[] = [
+  {
+    feature: "Increase bottom line by reducing costs and increasing efficiency",
+    data: [
+      "01 Automations to increase the efficiency in both AP and AR sides.",
+      "01 On time follow-ups with customers enables quicker realization of revenues",
+      "01 Tools like dynamic discounting to increase bottom line",
+      "01 Reduced human effort can be utilized to focus on increasing revenues",
+    ],
+  },
+  {
+    feature:
+      "A tool for CFOs to analyze the cash flow and simulate what-if scenarios",
+    data: [
+      "02 Automations to increase the efficiency in both AP and AR sides.",
+      "02 On time follow-ups with customers enables quicker realization of revenues",
+      "02 Tools like dynamic discounting to increase bottom line",
+      "02 Reduced human effort can be utilized to focus on increasing revenues",
+    ],
+  },
+  {
+    feature: "Use integrated financing to fulfill cash flow gaps just in time ",
+    data: [
+      "03 Automations to increase the efficiency in both AP and AR sides.",
+      "03 On time follow-ups with customers enables quicker realization of revenues",
+      "03 Tools like dynamic discounting to increase bottom line",
+      "03 Reduced human effort can be utilized to focus on increasing revenues",
+    ],
   },
 ];
