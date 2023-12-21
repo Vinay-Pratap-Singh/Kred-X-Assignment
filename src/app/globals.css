@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* class for backgound image */
+.mainBg {
+  background-image: url("../assets/mainBg.png");
+}
