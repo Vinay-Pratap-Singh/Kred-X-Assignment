@@ -6,7 +6,7 @@ type IProps = {
 
 const Button = ({ content }: IProps) => {
   return (
-    <button className="text-white bg-primaryColor rounded-md font-semibold sm:text-2xl px-5 sm:px-10 py-3">
+    <button className="text-white bg-primaryColor rounded-md font-semibold md:text-2xl px-5 sm:px-10 py-3">
       {content}
     </button>
   );

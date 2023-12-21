@@ -14,13 +14,13 @@ const CmsSection = () => {
               <div
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`font-semibold text-base sm:text-lg pr-5 sm:pr-10 cursor-pointer ${
+                className={`font-semibold text-base sm:text-lg pr-5 md:pr-10 cursor-pointer ${
                   currentIndex === index &&
                   "rounded-l-md bg-gradient-to-r from-[#093A71] to-[#1F9EA6]"
                 }`}
               >
                 <div
-                  className={`p-5 flex items-center gap-2 sm:gap-10  ${
+                  className={`p-5 flex items-center gap-2 sm:gap-10 justify-between  ${
                     currentIndex === index
                       ? "rounded-l-md bg-transparent text-white"
                       : "text-[#4A4A4A] rounded-md bg-white shadow-md"
@@ -51,7 +51,7 @@ const CmsSection = () => {
 
       {/* right section */}
       <ul
-        className={`sm:w-[40%] bg-[#1F9EA6] p-5 sm:p-10 self-stretch rounded-r-md flex flex-col gap-2 sm:gap-0 justify-between text-white ${
+        className={`sm:w-[40%] bg-[#1F9EA6] p-5 md:p-10 self-stretch rounded-r-md flex flex-col gap-2 sm:gap-0 justify-between text-white ${
           currentIndex !== 0 && "rounded-tl-md"
         } ${currentIndex !== cmsData.length - 1 && "rounded-bl-md"}`}
       >

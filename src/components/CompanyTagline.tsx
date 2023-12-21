@@ -3,7 +3,7 @@ import React from "react";
 
 const CompanyTagline = () => {
   return (
-    <section className="py-5 sm:py-20 px-5 sm:px-32 flex flex-col sm:flex-row items-center gap-2 sm:gap-10">
+    <section className="py-5 sm:py-10 md:py-20 px-5 sm:px-10 md:px-32 flex flex-col sm:flex-row items-center gap-2 sm:gap-5 md:gap-10">
       <Image
         className="w-8 h-14 sm:w-20 sm:h-20 transform rotate-90 sm:rotate-0"
         width={110}
