@@ -14,7 +14,7 @@ const CmsSection = () => {
               <div
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`font-semibold text-lg pr-10 cursor-pointer transition-all duration-200 ease-in-out ${
+                className={`font-semibold text-lg pr-10 cursor-pointer ${
                   currentIndex === index &&
                   "rounded-l-md bg-gradient-to-r from-[#093A71] to-[#1F9EA6]"
                 }`}

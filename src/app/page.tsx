@@ -5,6 +5,7 @@ import { featuresData } from "@/helper/data";
 import { IFeatureData } from "@/helper/interface";
 import FeatureCard from "@/components/FeatureCard";
 import CmsSection from "@/components/CmsSection";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -65,6 +66,9 @@ export default function Home() {
 
         <CmsSection />
       </section>
+
+      {/* footer section */}
+      <Footer />
     </main>
   );
 }
