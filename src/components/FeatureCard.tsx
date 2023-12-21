@@ -8,7 +8,7 @@ type IProps = {
 
 const FeatureCard = ({ feature }: IProps) => {
   return (
-    <div className="space-y-3 flex flex-col items-center">
+    <div className="space-y-2 sm:space-y-3 flex flex-col items-center">
       <div className="flex w-10 h-10">
         <Image
           width={50}

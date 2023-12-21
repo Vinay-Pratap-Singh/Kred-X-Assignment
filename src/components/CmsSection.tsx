@@ -5,22 +5,22 @@ import React, { useState } from "react";
 const CmsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   return (
-    <div className="flex items-center">
+    <div className="flex flex-col sm:flex-row gap-5 sm:gap-0 items-center">
       {/* left section */}
-      <div className="w-[60%] space-y-10">
+      <div className="sm:w-[60%] space-y-5 sm:space-y-10">
         {cmsData &&
           cmsData.map((data, index) => {
             return (
               <div
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`font-semibold text-lg pr-10 cursor-pointer ${
+                className={`font-semibold text-base sm:text-lg pr-5 sm:pr-10 cursor-pointer ${
                   currentIndex === index &&
                   "rounded-l-md bg-gradient-to-r from-[#093A71] to-[#1F9EA6]"
                 }`}
               >
                 <div
-                  className={`p-5 flex items-center gap-10  ${
+                  className={`p-5 flex items-center gap-2 sm:gap-10  ${
                     currentIndex === index
                       ? "rounded-l-md bg-transparent text-white"
                       : "text-[#4A4A4A] rounded-md bg-white shadow-md"
@@ -51,13 +51,16 @@ const CmsSection = () => {
 
       {/* right section */}
       <ul
-        className={`w-[40%] bg-[#1F9EA6] p-10 self-stretch rounded-r-md flex flex-col justify-between text-white ${
+        className={`sm:w-[40%] bg-[#1F9EA6] p-5 sm:p-10 self-stretch rounded-r-md flex flex-col gap-2 sm:gap-0 justify-between text-white ${
           currentIndex !== 0 && "rounded-tl-md"
         } ${currentIndex !== cmsData.length - 1 && "rounded-bl-md"}`}
       >
         {cmsData[currentIndex].data.map((list, index) => {
           return (
-            <li key={index} className="flex gap-5">
+            <li
+              key={index}
+              className="flex gap-3 sm:gap-5 text-sm sm:text-base"
+            >
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
