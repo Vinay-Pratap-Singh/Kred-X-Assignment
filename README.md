@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Kred X assignment project
 
-## Getting Started
+## Topics to be covered
 
-First, run the development server:
+1. [Introduction](#introduction)
+2. [Tech Stack](#tech-stack)
+3. [Features](#features)
+4. [Live Link](#live-link)
+5. [Watch Video](#project-video)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Introduction
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This is a part of the assignment given to me in which I had to replicate a figma design into a webpage by leveraging the power of Next JS.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Next JS
+- Tailwind CSS
+- Typescript
 
-## Learn More
+## Features
 
-To learn more about Next.js, take a look at the following resources:
+- Responsive for all screen sizes, from mobile screen, tablet, laptop to bigger screen sizes.
+- Used helper data for rendering the automation capabilites and CMS advantages section dynamically.
+- Dynamic list of advantages for CMS on user click.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Live Link
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+[Check Project](https://kred-x-assignment.vercel.app/)
 
-## Deploy on Vercel
+## Project Video
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Check the video to get better clarity and explanation regarding the project.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[Watch Video](https://drive.google.com/file/d/1c7uWLQwNeWEphlXKi3zyPuzXk9z5SNvn/view?usp=sharing)
