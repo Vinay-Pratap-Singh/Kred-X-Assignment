@@ -6,8 +6,8 @@ import { IFeatureData } from "@/helper/interface";
 import FeatureCard from "@/components/FeatureCard";
 import CmsSection from "@/components/CmsSection";
 import Footer from "@/components/Footer";
-import ResourcesCard from "@/components/Resources";
 import Resources from "@/components/Resources";
+import ScheduleDemo from "@/components/ScheduleDemo";
 
 export default function Home() {
   return (
@@ -107,6 +107,13 @@ export default function Home() {
 
           {/* container for resources */}
           <Resources />
+        </div>
+      </section>
+
+      {/* schedule a demo section */}
+      <section className="flex items-center gap-5 sm:gap-10 md:gap-20 bg-center pt-6 sm:pt-14 pb-8 sm:pb-16 px-5 md:px-20 bg-gray-50">
+        <div className="bg-white rounded-md shadow-md flex items-center gap-10 p-10 mb-10">
+          <ScheduleDemo />
         </div>
       </section>
 
