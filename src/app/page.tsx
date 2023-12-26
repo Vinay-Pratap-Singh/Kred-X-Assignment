@@ -6,6 +6,8 @@ import { IFeatureData } from "@/helper/interface";
 import FeatureCard from "@/components/FeatureCard";
 import CmsSection from "@/components/CmsSection";
 import Footer from "@/components/Footer";
+import ResourcesCard from "@/components/Resources";
+import Resources from "@/components/Resources";
 
 export default function Home() {
   return (
@@ -73,6 +75,39 @@ export default function Home() {
         </h1>
 
         <CmsSection />
+      </section>
+
+      {/* resources section */}
+      <section className="flex flex-col items-center gap-5 sm:gap-10 md:gap-20 bg-center pt-6 sm:pt-14 pb-8 sm:pb-16 px-5 md:px-20 bg-gray-50">
+        <h1 className="text-center font-semibold text-2xl sm:text-3xl md:text-5xl sm:w-[40rem] bg-gradient-to-r from-[#239A99] to-[#4EB7E9] text-transparent bg-clip-text">
+          Resources
+        </h1>
+
+        <div className="flex flex-col gap-10">
+          {/* button for see all resources */}
+          <div className="self-end flex items-center gap-5 ">
+            <p className="font-semibold text-xl">See All Resources</p>
+            <div className="rounded-full w-7 h-7 bg-[#ebf9f8] text-[#289997] flex items-center justify-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="5"
+                stroke="currentColor"
+                className="w-5 h-5"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                />
+              </svg>
+            </div>
+          </div>
+
+          {/* container for resources */}
+          <Resources />
+        </div>
       </section>
 
       {/* footer section */}
