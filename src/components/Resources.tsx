@@ -1,49 +1,17 @@
 "use client";
 
+import { IResourceData } from "@/helper/interface";
+
+import { client } from "@/utils/configSanity";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import SanityImage from "./SanityImage";
 
 const Resources = () => {
-  const resourceData = [
-    {
-      image: "/assets/resource/resource1.png",
-      title:
-        "01 Accounts Payable Automation and Payment Optimization: Improving Business Efficiency",
-      date: "18/12/2023",
-    },
-    {
-      image: "/assets/resource/resource1.png",
-      title:
-        "02 Accounts Payable Automation and Payment Optimization: Improving Business Efficiency",
-      date: "18/12/2023",
-    },
-    {
-      image: "/assets/resource/resource1.png",
-      title:
-        "03 Accounts Payable Automation and Payment Optimization: Improving Business Efficiency",
-      date: "18/12/2023",
-    },
-    {
-      image: "/assets/resource/resource1.png",
-      title:
-        "04 Accounts Payable Automation and Payment Optimization: Improving Business Efficiency",
-      date: "18/12/2023",
-    },
-    {
-      image: "/assets/resource/resource1.png",
-      title:
-        "05 Accounts Payable Automation and Payment Optimization: Improving Business Efficiency",
-      date: "18/12/2023",
-    },
-    {
-      image: "/assets/resource/resource1.png",
-      title:
-        "06 Accounts Payable Automation and Payment Optimization: Improving Business Efficiency",
-      date: "18/12/2023",
-    },
-  ];
-
-  const [perPage, setPerPage] = useState(3);
+  // const resolveSanityImage = useSanityImage();
+  const isLoading = useRef(false);
+  const [resourceData, setResourceData] = useState<IResourceData[]>([]);
+  const perPage = 3;
   const [currentPage, setCurrentPage] = useState(1);
   const startIndex = (currentPage - 1) * perPage;
   const currentPageData = resourceData.slice(startIndex, startIndex + perPage);
@@ -51,28 +19,43 @@ const Resources = () => {
     setCurrentPage(newPage);
   };
 
+  // function to fetch data from sanity
+  useEffect(() => {
+    const getResourceData = async () => {
+      try {
+        isLoading.current = true;
+        const query = `*[_type == "resources"]`;
+        const data = (await client.fetch(query)) as IResourceData[];
+        setResourceData(data);
+        isLoading.current = false;
+      } catch (error) {
+        isLoading.current = false;
+        alert("Failed to load data");
+      }
+    };
+    getResourceData();
+  }, []);
+
   return (
     // container for resources
-    <div className="flex flex-col gap-10 items-center">
+    <div className="flex flex-col gap-10 items-center w-full">
       <div className="flex items-center gap-10">
-        {currentPageData.map((resource, index) => {
-          return (
-            <div key={index} className="w-80 space-y-3">
-              <Image
-                className="w-full rounded-md"
-                width={300}
-                height={150}
-                src={resource?.image}
-                alt={`Resource ${index + 1}`}
-              />
-
-              <h5 className="font-semibold text-lg leading-5">
-                {resource?.title}
-              </h5>
-              <p className="text-[#909090] font-medium">{resource?.date}</p>
-            </div>
-          );
-        })}
+        {isLoading.current ? (
+          <h1>Loading ...</h1>
+        ) : (
+          currentPageData &&
+          currentPageData.map((resource: IResourceData, index) => {
+            return (
+              <div key={resource?._id} className="w-80 space-y-3">
+                <SanityImage image={resource?.image} />
+                <h5 className="font-semibold text-lg leading-5 line-clamp-2">
+                  {resource?.title}
+                </h5>
+                <p className="text-[#909090] font-medium">{resource?.date}</p>
+              </div>
+            );
+          })
+        )}
       </div>
 
       {/* for dots */}

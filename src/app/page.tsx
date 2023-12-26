@@ -83,7 +83,7 @@ export default function Home() {
           Resources
         </h1>
 
-        <div className="flex flex-col gap-10">
+        <div className="flex flex-col gap-10 w-full">
           {/* button for see all resources */}
           <div className="self-end flex items-center gap-5 ">
             <p className="font-semibold text-xl">See All Resources</p>
