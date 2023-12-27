@@ -37,9 +37,9 @@ const Resources = () => {
 
   return (
     <div className="flex flex-col gap-10 items-center w-full">
-      <div className="flex items-center gap-10">
+      <div className="flex flex-col sm:flex-row items-center gap-5 sm:gap-10">
         {isLoading.current ? (
-          <div className="flex items-center gap-10">
+          <div className="flex flex-col sm:flex-row items-center gap-10">
             {Array.from({ length: 3 }).map((_, index) => {
               return <Shimmer key={index} />;
             })}
@@ -51,7 +51,7 @@ const Resources = () => {
             return (
               <div
                 key={resource?._id}
-                className="w-80 space-y-3 cursor-pointer hover:shadow-md hover:p-2 hover:rounded-md transition-all ease-in-out duration-300"
+                className="w-80 space-y-3 cursor-pointer hover:shadow-md hover:p-2 hover:rounded-md transition-all ease-in-out duration-300 self-stretch"
               >
                 <SanityImage image={resource?.image} />
                 <h5 className="font-semibold text-lg leading-5 line-clamp-2">

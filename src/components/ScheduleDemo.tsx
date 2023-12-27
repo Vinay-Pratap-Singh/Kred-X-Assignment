@@ -41,16 +41,19 @@ const ScheduleDemo = () => {
 
   return (
     <div className="w-full space-y-5">
-      <div className="flex items-center gap-10 h-full">
+      <div className="flex flex-col sm:flex-row items-center gap-5 lg:gap-10 h-full">
         <Image
-          className="rounded-md self-stretch w-1/2"
+          className="rounded-md self-stretch w-full sm:w-1/2"
           width={200}
           height={200}
           src="/assets/scheduleDemo/scheduleDemo.png"
           alt="scheduleDemo"
         />
-        <form onSubmit={handleSubmit(onSubmit)} className="w-1/2 self-stretch">
-          <div className="w-full flex flex-col items-center h-full justify-between">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="w-full sm:w-1/2 self-stretch"
+        >
+          <div className="w-full flex flex-col gap-5 lg:gap-0 items-center h-full justify-between">
             <h1 className="font-semibold text-2xl sm:text-3xl bg-gradient-to-r from-[#239A99] to-[#4EB7E9] text-transparent bg-clip-text">
               Experience the simplicity and efficiency of KredX today!
             </h1>

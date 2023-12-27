@@ -85,7 +85,7 @@ export default function Home() {
 
         <div className="flex flex-col gap-10 w-full">
           {/* button for see all resources */}
-          <div className="self-end flex items-center gap-5 ">
+          <div className="sm:self-end self-center flex items-center gap-5 ">
             <p className="font-semibold text-xl">See All Resources</p>
             <div className="rounded-full w-7 h-7 bg-[#ebf9f8] text-[#289997] flex items-center justify-center">
               <svg
@@ -111,8 +111,8 @@ export default function Home() {
       </section>
 
       {/* schedule a demo section */}
-      <section className="flex items-center gap-5 sm:gap-10 md:gap-20 bg-center pt-6 sm:pt-14 pb-8 sm:pb-16 px-5 md:px-20 bg-gray-50">
-        <div className="bg-white rounded-md shadow-md flex items-center gap-10 p-10 mb-10">
+      <section className="flex items-center gap-5 sm:gap-10 lg:gap-20 bg-center pt-6 sm:pt-14 pb-8 sm:pb-16 px-5 lg:px-20 bg-gray-50">
+        <div className="bg-white rounded-md shadow-md flex items-center gap-5 sm:gap-10 p-5 sm:p-10 mb-10">
           <ScheduleDemo />
         </div>
       </section>
