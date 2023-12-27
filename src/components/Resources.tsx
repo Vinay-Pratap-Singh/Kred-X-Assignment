@@ -8,7 +8,6 @@ import Shimmer from "./Shimmer";
 import toast from "react-hot-toast";
 
 const Resources = () => {
-  // const resolveSanityImage = useSanityImage();
   const isLoading = useRef(true);
   const [resourceData, setResourceData] = useState<IResourceData[]>([]);
   const perPage = 3;
