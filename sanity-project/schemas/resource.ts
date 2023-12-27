@@ -1,7 +1,7 @@
 export default {
-  name: 'resources',
+  name: 'resource',
   type: 'document',
-  title: 'Resources',
+  title: 'Resource',
   fields: [
     {
       name: 'title',

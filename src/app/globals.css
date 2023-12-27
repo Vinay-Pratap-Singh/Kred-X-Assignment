@@ -6,3 +6,34 @@ body {
   max-width: 1440px;
   margin: auto;
 }
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes shimmerDelayed {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, #e5e5e5 25%, #f4f4f4 50%, #e5e5e5 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+.animate-shimmer-delayed {
+  animation: shimmerDelayed 1s infinite;
+}
