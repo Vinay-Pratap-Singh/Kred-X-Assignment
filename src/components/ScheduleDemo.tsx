@@ -2,6 +2,7 @@
 
 import { client } from "@/utils/configSanity";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import toast from "react-hot-toast";
@@ -13,6 +14,7 @@ type IFormData = {
 };
 
 const ScheduleDemo = () => {
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -21,7 +23,6 @@ const ScheduleDemo = () => {
   } = useForm<IFormData>();
 
   const onSubmit: SubmitHandler<IFormData> = async (data) => {
-    console.log(data);
     try {
       await client.create({
         _type: "user",
@@ -30,7 +31,9 @@ const ScheduleDemo = () => {
         phoneNumber: data?.phoneNumber,
       });
       toast.success("Data submitted successfully");
+      localStorage.setItem("data", JSON.stringify(data));
       reset();
+      router.push("/thanks");
     } catch (error) {
       toast.error("Failed to save the data");
     }
